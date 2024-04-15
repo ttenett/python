@@ -66,4 +66,39 @@ x = x + 1 에서 '=' 는 '같다'의 의미가 절!대!아님. 지정 연산자(
 
 ### return문의 역할
 - 값 돌려주기 / 함수 즉시 종료하기
-- 
+- 함수에 리턴문이 없으면 리턴값이 없다는 의미에서 None이 호출됨.
+- return 문에 반환할 값이 명시되지 않으면 None 을 반환.
+
+```python
+def first():
+    message = "코드잇"
+    return message
+
+def second():
+    message = "codeit"
+    print(message)
+
+def third():
+    message = None
+    print(message)
+    return message
+# 테스트 코드
+print(first())
+second()
+print(third())
+```
+third() 함수를 호출하면 함수 본문이 실행. 그래서 print(message) 에 의해 None 이 한번 출력. 그리고 함수에 return 이 없으므로 None 이 호출한 결괏값으로 반환.
+
+### 옵셔널 파라미터
+- 파라미터에 '기본값(default value)'을 설정할 수 있음. 기본값을 설정해 두면, 함수를 호출할 때 파라미터에 값을 꼭 넘겨주지 않아도 됨. 이런 파라미터를 '옵셔널 파라미터(optional parameter)'라고 함.
+- 옵셔널 파라미터는 모두 마지막에 있어야 함. 아래처럼 옵셔널 파라미터를 중간에 넣으면 오류가 발생
+```python
+def myself(name, nationality="한국", age):  -> def myself(name, age, nationality="한국"):이게 맞는거거
+    print("내 이름은 {}".format(name))
+    print("나이는 {}살".format(age))
+    print("국적은 {}".format(nationality))
+
+myself("ㅇㅇㅇ", 1)  # 기본값이 설정된 파라미터를 바꾸지 않을 때
+print()
+myself("ㅇㅇㅇ", "미국", 1)  # 기본값이 설정된 파라미터를 바꾸었을 때
+```
