@@ -387,7 +387,9 @@ while 다운로드 안 받은 이미지가 있다:
 ```
 - else + if : elif 문, 조건문 밑에 조건문을 추가하고 싶을때 사용.
 
+
 # 프로그래밍과 데이터 in파이썬
+1) 리스트와 리스트 함수
 - index : 리스트에서 요소의 위치. 리스트는 0부터 시작한다. print(변수명[0])
 - indexing : 인덱스를 통해 요소를 받아오는 것. 
 - numbers[-1] : 오른쪽 끝 마지막 숫자부터 -1, -2, -3 순서임.
@@ -395,3 +397,26 @@ while 다운로드 안 받은 이미지가 있다:
 - del numbers[3] : delete 3번 인덱스 삭제
 - numbers.append(3) : 추가 연산, 리스트의 오른쪽에 요소를 추가해줌. 무조건 제일 오른쪽에 추가.
 - numbers.insert(4, 3) : 삽입 연산, numbers 4번 인덱스에 37을 삽입. 원하는 위치에 값을 넣을 수 있음. 원래 있던 값들은 오른쪽으로 한칸씩 밀려남. 0.0
+1) 리스트 정렬
+   - sorted : 기존 리스트는 건드리지 않고, 정렬된 새로운 리스트를 리턴
+   - sort : 아무것도 리턴하지 않고, 기존 리스트를 정렬
+    ```python
+    예제- greetings = ["안녕", "니하오", "곤니찌와", "올라", "싸와디캅", "헬로", "봉주르"] 리스트의 원소를 모두 출력
+    내답 
+    n = 0
+    while greetings[n]:
+        print(greetings[n])
+        n += 1
+
+    Traceback (most recent call last):
+    File "main.py", line 4, in <module>
+    while greetings[n]:
+    IndexError: list index out of range
+    ```
+    결과는 잘 나오는 것 같았는데 오류가 발생함. IndexError: list index out of range는 `greetings` 리스트의 인덱스가 범위를 벗어났기 때문에 발생한다. `while` 루프의 조건을 수정하여 리스트의 길이를 초과하지 않도록 해야 함.
+    ```python
+    n = 0
+    while n < len(greetings):
+        print(greetings[n])
+        n += 1
+    ```
