@@ -420,3 +420,26 @@ while 다운로드 안 받은 이미지가 있다:
         print(greetings[n])
         n += 1
     ```
+
+Q2. 화씨를 섭씨로 바꾸기
+```python
+# 화씨 온도에서 섭씨 온도로 바꿔 주는 함수
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5 / 9
+
+
+temperature_list = [40, 15, 32, 64, -4, 11]
+print("화씨 온도 리스트: {}".format(temperature_list))  # 화씨 온도 출력
+
+# 리스트의 값들을 화씨에서 섭씨로 변환하는 코드를 입력하세요len(temperature_list)
+
+n = 0
+while n < len(temperature_list):
+    temperature_list[n] = round(fahrenheit_to_celsius(temperature_list[n]), 1)
+    n += 1
+
+print("섭씨 온도 리스트: {}".format(temperature_list))  # 섭씨 온도 출력
+```
+결과문
+화씨 온도 리스트: [40, 15, 32, 64, -4, 11]
+섭씨 온도 리스트: [4.4, -9.4, 0.0, 17.8, -20.0, -11.7]
