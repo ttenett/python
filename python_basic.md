@@ -447,4 +447,25 @@ print("섭씨 온도 리스트: {}".format(temperature_list))  # 섭씨 온도 �
 
 
 - for 반복문
-- while문과는 다르게 조건문이 없다. 리스트의 변수들이 순서대로 수행부분으로 들어감.
+- while문과는 다르게 조건문이 없다. 리스트의 변수들이 인덱스 순서대로 수행부분으로 들어감.
+- range 함수 : 파라미터 1~3개 쓰는 버전이 있음. 
+
+```python 
+for i in range(start, stop): # start부터 stop-1까지 범위.
+    print(i)
+
+for i in range(stop): # 0부터 stop-1까지 범위.
+    print(i)
+
+for i in range(start, stop, step): # start부터 stop-1까지 범위, 간격 step
+    print(i)
+```
+- range 장점: 간편함, 깔끔함. 긴 리스트 직접 안만들어도 유사한 효과를 낼 수 있음. 컴퓨터 메모리의 효율성 - 1부터 1만까지의 메모리를 잡는게 아니라, 1쓰고 버리고, 2쓰고 버리고 3쓰고 버리는 식.
+
+```python
+numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+
+# 인덱스와 원소 출력
+for i in range(len(numbers)):
+    print(i, numbers[i])
+```
