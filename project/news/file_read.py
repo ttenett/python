@@ -1,21 +1,3 @@
-# import base64
-# import codecs
-
-# # article 파일 열기
-# file = open('C:\\Users\\yeonjeong\\TIL\\01_python\\project\\news\\article', 'r')
-# temp = file.read()
-# file.close()
-# print(temp)
-
-# # html 파일열기
-# file2 = open('news\summary.html', 'r', delcoding='CP949')
-# file.close
-# print(file2)
-
-# 파일에서 텍스트 읽기
-# with codecs.open('C:\\Users\\yeonjeong\\TIL\\01_python\\project\\news\\article', 'r', encoding='utf-8') as f:
-#     content = f.read()
-
 import base64
 from bs4 import BeautifulSoup
 from newspaper import Article 
@@ -33,6 +15,14 @@ def get_local_file():
         html_content = html.read()
         soup = BeautifulSoup(html_content, 'html.parser')
     return soup
+
+
+def summarize_text(text):
+    """Summarize the given text using a pre-trained model."""
+    model = Summarizer()
+    summary = model(text, max_length=100)
+    return summary
+# 한국어기사 요약하는 라이브러리를 찾아봐야함.
 
 # 특정 기사 url 로부터 기사 읽어오기, title 과 text 분리하는 함수
 def get_url_article():
