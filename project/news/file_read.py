@@ -17,14 +17,21 @@ def get_local_file():
     return soup
 
 
-def summarize_text(text):
-    """Summarize the given text using a pre-trained model."""
-    model = Summarizer()
-    summary = model(text, max_length=100)
-    return summary
-# 한국어기사 요약하는 라이브러리를 찾아봐야함.
-
 # 특정 기사 url 로부터 기사 읽어오기, title 과 text 분리하는 함수
+# 추가구현 : url 입력 후 뉴스기사 받아오기 -> 터미널에 text 띄워보기.
+
+
+
+
+
+
+
+
+
+
+
+
+
 def get_url_article():
     url = 'https://www.gamevu.co.kr/news/articleView.html?idxno=38226'
 
