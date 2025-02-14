@@ -1,3 +1,4 @@
+import datetime
 
 year = int(input('달력을 보고싶은 연도를 입력해주세요.'))
 month = int(input('달력을 보고싶은 월을 입력해주세요.'))
@@ -41,8 +42,10 @@ days = what_lastday(year, month)
 for i in range(1, days + 1):
     print(i, end=' ')
 
-    weekday()
-
+# weekday() 써서 업데이트 해보기
+now = datetime.datetime.now()
+day_of_week = now.weekday()
+print(day_of_week)
 
 # print(f'{year:^10}년 {month:^10}월') ->    2025   년     2     월
 
