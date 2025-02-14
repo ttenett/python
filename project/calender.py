@@ -33,7 +33,6 @@ def what_lastday(year, month):
 
 day_of_week = '일 월 화 수 목 금 토'
 print('====================')
-
 print(f'    {year}년  {month}월     ')
 print('====================')
 print(day_of_week)
@@ -41,6 +40,8 @@ print(day_of_week)
 days = what_lastday(year, month)
 for i in range(1, days + 1):
     print(i, end=' ')
+
+    weekday()
 
 
 # print(f'{year:^10}년 {month:^10}월') ->    2025   년     2     월
