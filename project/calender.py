@@ -47,6 +47,13 @@ now = datetime.datetime.now()
 day_of_week = now.weekday()
 print(day_of_week)
 
+# 첫번째주 출력해보기
+
+
+
+# if __name__ == '__main__':
+#     main()
+
 # print(f'{year:^10}년 {month:^10}월') ->    2025   년     2     월
 
 
