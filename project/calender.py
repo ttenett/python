@@ -47,15 +47,12 @@ now = datetime.datetime.now()
 day_of_week = now.weekday()
 print(day_of_week)
 
+first_day = datetime.date(year, month, 1).weekday()  
+
 # 첫번째주 출력해보기
-
-
-
-
-
-
-
-
+print('    ' * first_day, end='')  # 첫 번째 날짜 전까지 공백 추가
+for day in range(1, 8 - first_day + 1):  # 첫 주의 날짜 출력
+    print(f'{day:2}', end=' ')
 
 # if __name__ == '__main__':
 #     main()
